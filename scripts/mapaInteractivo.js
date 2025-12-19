@@ -4,9 +4,6 @@ const MENSAJE_SIN_PROYECTO = {
   es: "Aún no hay un proyecto, estamos trabajando en eso!",
   en: "There is no project yet — we're working on it!"
 };
-// ==========================
-// i18n MAPA – traducciones EN
-// ==========================
 
 const getLang = () => localStorage.getItem("idioma") || "es";
 
@@ -330,8 +327,6 @@ const MAPA_UI = {
   }
 };
 
-// Traducciones SOLO para las provincias con proyecto (rojas)
-// Keys = códigos del SVG / provinciasInfo (ARE, ARX, ARL, ARW, etc.)
 const MAPA_PROY_I18N = {
   en: {
     ARE: { // Entre Ríos (Delta)
@@ -371,7 +366,6 @@ function renderContenidoProvincia(codigo) {
     };
   }
 
-  // Traducción EN (pisamos nombre/problematica/resumen si existe)
   const datosTrad =
     (lang === "en" && PROVINCIAS_I18N_EN[codigo])
       ? { ...datos, ...PROVINCIAS_I18N_EN[codigo] }
@@ -379,7 +373,6 @@ function renderContenidoProvincia(codigo) {
 
   const esRoja = provinciasRojas.has(codigo);
 
-  // Provincias sin proyecto
   if (!esRoja) {
     const problematica = datosTrad.problematica || ui.fallbackProblematica;
 
@@ -390,7 +383,6 @@ function renderContenidoProvincia(codigo) {
     };
   }
 
-  // Provincias con proyecto
   const resumen = datosTrad.resumen || ui.fallbackResumen;
 
   const img = datosTrad.img
@@ -599,4 +591,5 @@ window.addEventListener("idioma:cambio", () => {
   if (tituloProvincia) tituloProvincia.textContent = contenido.titulo;
   if (textoProvincia)  textoProvincia.innerHTML = contenido.html;
 });
+
 
