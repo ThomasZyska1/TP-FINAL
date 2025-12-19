@@ -282,9 +282,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const i18n = {
     es: {
-      /* ======================
-         TITLES
-      ====================== */
       titleHome: "Home - Renacer",
       titleProyectos: "Proyectos - Renacer",
       titleDona: "Doná - Renacer",
@@ -292,24 +289,15 @@ document.addEventListener("DOMContentLoaded", () => {
       titleMapa: "Mapa - Renacer",
       titleContacto: "Contacto - Renacer",
 
-      /* ======================
-         NAV (GLOBAL)
-      ====================== */
       navProyectos: "PROYECTOS",
       navNosotros: "NOSOTROS",
       navMapa: "MAPA",
       navContacto: "CONTACTO",
       navDona: "DONÁ",
 
-      /* ======================
-         FOOTER (GLOBAL)
-      ====================== */
       footerHtml:
         "© 2024 Renacer. Todos los derechos reservados.<br>Trabajo realizado por Thomas Zyska (1226459) - UADE - Desarrollo Web<br>Profesor: Bellanti Emanuel",
 
-      /* ======================
-         CONTACTO
-      ====================== */
       heroTitulo: "Contacto",
       heroTexto:
         "¿Querés sumarte como voluntario, proponer un proyecto o hacer una consulta? Escribinos y te respondemos lo antes posible.",
@@ -344,9 +332,6 @@ document.addEventListener("DOMContentLoaded", () => {
       nota: "También podés escribirnos directo a",
       mapaTitulo: "Encontranos",
 
-      /* ======================
-         HOME (INDEX)
-      ====================== */
       homeHeroH1: "JUNTOS PODEMOS RENACER",
       homeHeroP: "Recontruiremos todos juntos los ecosistemas arboreos del país",
       homeQueHacemosH3: "¿Que hacemos?",
@@ -392,9 +377,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "Los incendios en el Delta del Paraná devastaron miles de hectáreas de humedales. En este artículo contamos qué ocurrió y cómo Renacer trabajará para recuperar este ecosistema.",
       homeCard_lapampa_a: "Leer Más",
 
-      /* ======================
-         PROYECTOS
-      ====================== */
       proyTag: "Renacer · Proyectos",
       proyH1: "Proyectos activos",
       proyBajada:
@@ -421,9 +403,6 @@ document.addEventListener("DOMContentLoaded", () => {
       proyPunto2: "Recolección/producción de plantines nativos.",
       proyPunto3: "Monitoreo, mantenimiento y transparencia de resultados.",
 
-      /* ======================
-         NOSOTROS
-      ====================== */
       nosQuienesH3: "Quiénes somos",
       nosQuienesP:
         '<span>Renacer</span> es una organización argentina dedicada a la restauración de bosques nativos, humedales y ecosistemas degradados por incendios y deforestación. Trabajamos con ciencia, compromiso social y una visión clara: reconstruir los paisajes naturales del país para que las futuras generaciones hereden un territorio sano y vivo.',
@@ -444,16 +423,10 @@ document.addEventListener("DOMContentLoaded", () => {
       nosTranspP:
         'En <span>Renacer</span> creemos que la confianza se construye con información clara y accesible. Por eso trabajamos con un fuerte compromiso con la transparencia en cada una de nuestras acciones.<br><br>Comunicamos de manera abierta el origen y destino de nuestros recursos, los proyectos que desarrollamos y los resultados que obtenemos. Entendemos la rendición de cuentas como una responsabilidad fundamental hacia las comunidades con las que trabajamos, las personas que nos apoyan y el entorno que buscamos proteger.<br><br>Nuestro objetivo es que cada aporte, cada decisión y cada proyecto puedan ser comprendidos y acompañados por quienes confían en nuestro trabajo.',
 
-      /* ======================
-         MAPA
-      ====================== */
       mapProvTitulo: "Elegí una provincia",
       mapProvTexto: "Pasá el mouse y hacé clic sobre una provincia para ver el proyecto asociado.",
       mapAclaratorio: 'En <span>ROJO</span>, se encuentran las provincias en las que actualmente operamos.',
 
-      /* ======================
-         DONA
-      ====================== */
       donaHeroH1: "<span>Doná</span> a Renacer",
       donaHeroP:
         "Tu aporte se transforma en árboles, mantenimiento y recuperación de ecosistemas.<br>Elegí un proyecto, seleccioná el monto y completá los 3 pasos.<br>Luego le enviaremos un email a su correo con el comprobante de donación y los detalles de utilizacion de los fondos.",
@@ -506,9 +479,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     en: {
-      /* ======================
-         TITLES
-      ====================== */
       titleHome: "Home - Renacer",
       titleProyectos: "Projects - Renacer",
       titleDona: "Donate - Renacer",
@@ -516,24 +486,15 @@ document.addEventListener("DOMContentLoaded", () => {
       titleMapa: "Map - Renacer",
       titleContacto: "Contact - Renacer",
 
-      /* ======================
-         NAV (GLOBAL)
-      ====================== */
       navProyectos: "PROJECTS",
       navNosotros: "ABOUT US",
       navMapa: "MAP",
       navContacto: "CONTACT",
       navDona: "DONATE",
 
-      /* ======================
-         FOOTER (GLOBAL)
-      ====================== */
       footerHtml:
         "© 2024 Renacer. All rights reserved.<br>Project by Thomas Zyska (1226459) - UADE - Web Development<br>Professor: Bellanti Emanuel",
 
-      /* ======================
-         CONTACTO
-      ====================== */
       heroTitulo: "Contact",
       heroTexto:
         "Do you want to volunteer, propose a project, or ask a question? Write to us and we’ll get back to you as soon as possible.",
@@ -568,9 +529,6 @@ document.addEventListener("DOMContentLoaded", () => {
       nota: "You can also email us at",
       mapaTitulo: "Find us",
 
-      /* ======================
-         HOME (INDEX)
-      ====================== */
       homeHeroH1: "TOGETHER, WE CAN RISE AGAIN",
       homeHeroP: "Together we will restore Argentina’s forest ecosystems",
       homeQueHacemosH3: "What do we do?",
@@ -616,9 +574,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "Environmental pressure has affected areas of La Pampa. In this article we explain what happened and how Renacer will contribute to restoration.",
       homeCard_lapampa_a: "Read more",
 
-      /* ======================
-         PROYECTOS
-      ====================== */
       proyTag: "Renacer · Projects",
       proyH1: "Active projects",
       proyBajada:
@@ -645,9 +600,6 @@ document.addEventListener("DOMContentLoaded", () => {
       proyPunto2: "Collecting/producing native seedlings.",
       proyPunto3: "Monitoring, maintenance, and transparent reporting.",
 
-      /* ======================
-         NOSOTROS
-      ====================== */
       nosQuienesH3: "Who we are",
       nosQuienesP:
         "<span>Renacer</span> is an Argentine organization dedicated to restoring native forests, wetlands, and ecosystems degraded by wildfires and deforestation. We work with science, social commitment, and a clear vision: rebuilding natural landscapes so future generations inherit a healthy, living territory.",
@@ -668,16 +620,10 @@ document.addEventListener("DOMContentLoaded", () => {
       nosTranspP:
         "At <span>Renacer</span>, we believe trust is built with clear, accessible information. That’s why transparency is central to everything we do.<br><br>We communicate openly how resources are obtained and used, which projects we develop, and the results we achieve.<br><br>Our goal is that every contribution, decision, and project can be understood and supported by those who trust our work.",
 
-      /* ======================
-         MAPA
-      ====================== */
       mapProvTitulo: "Choose a province",
       mapProvTexto: "Hover and click a province to see the associated project.",
       mapAclaratorio: 'In <span>RED</span> you can see the provinces where we currently operate.',
 
-      /* ======================
-         DONA
-      ====================== */
       donaHeroH1: "<span>Donate</span> to Renacer",
       donaHeroP:
         "Your contribution becomes trees, maintenance, and ecosystem recovery.<br>Choose a project, select an amount, and complete the 3 steps.<br>Then we will email you a donation receipt and details on how funds are used.",
@@ -823,3 +769,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') cerrar();
   });
 });
+
