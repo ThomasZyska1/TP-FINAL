@@ -62,9 +62,6 @@
   if(!$lista || !$input || !$contador) return;
 
   let filtroEco = "todos";
-    // ==========================
-  // i18n (solo PROYECTOS cards)
-  // ==========================
   const getLang = () => localStorage.getItem("idioma") || "es";
 
   const UI_I18N = {
@@ -89,7 +86,6 @@
     }
   };
 
-  // Traducciones por proyecto (por id)
   const PROY_I18N = {
       es: {
       "delta-parana": {
@@ -412,9 +408,9 @@ document.getElementById("lightboxNext").addEventListener("click", (e) => {
 
 })();
 
-// Exponer render para i18n
 if (typeof renderizarProyectos === "function") {
   window.renderizarProyectos = renderizarProyectos;
   window.addEventListener("idioma:cambio", () => renderizarProyectos());
 }
+
 
