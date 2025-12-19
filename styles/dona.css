@@ -479,17 +479,12 @@ select:focus, input:focus{
     }
 }
 
-/* =========================
-   RESPONSIVE DONA (CELULAR)
-   ========================= */
-
 @media (max-width: 768px){
 
   main{
     padding-bottom: 10vh;
   }
 
-  /* HERO */
   .dona-hero{
     width: 84%;
     padding: 4vh 6%;
@@ -505,7 +500,6 @@ select:focus, input:focus{
     line-height: 1.5;
   }
 
-  /* PANEL PROYECTOS */
   .panel-proyectos{
     width: 84%;
     padding: 4vh 6%;
@@ -562,7 +556,6 @@ select:focus, input:focus{
     text-align: center;
   }
 
-  /* Steps: apilados para que no se rompan */
   .steps{
     flex-direction: column;
     align-items: flex-start;
@@ -584,7 +577,6 @@ select:focus, input:focus{
     height: 4.2vh;
   }
 
-  /* BLOQUES */
   .bloque{
     padding: 3vh 6%;
   }
@@ -599,7 +591,6 @@ select:focus, input:focus{
     line-height: 1.5;
   }
 
-  /* Inputs / selects full */
   select, input{
     font-size: 2vh;
     padding: 1.5vh 1.6vh;
@@ -614,7 +605,6 @@ select:focus, input:focus{
     gap: 2.2vh;
   }
 
-  /* Montos más grandes y en 2 columnas */
   .monto-grid{
     grid-template-columns: 1fr 1fr;
     gap: 1.6vh;
@@ -625,7 +615,6 @@ select:focus, input:focus{
     padding: 1.8vh 0;
   }
 
-  /* Panel pago */
   .pago-panel{
     padding: 2.5vh 6%;
   }
@@ -638,7 +627,6 @@ select:focus, input:focus{
     word-break: break-word;
   }
 
-  /* Acciones: botones full width */
   .acciones{
     flex-direction: column;
     align-items: stretch;
@@ -657,7 +645,6 @@ select:focus, input:focus{
     font-size: 1.8vh;
   }
 
-  /* Resumen */
   .resumen{
     font-size: 2vh;
   }
@@ -674,7 +661,6 @@ select:focus, input:focus{
   }
 }
 
-/* EXTRA: celulares chicos */
 @media (max-width: 420px){
 
   .monto-grid{
@@ -690,3 +676,4 @@ select:focus, input:focus{
     font-size: 2.7vh;
   }
 }
+
