@@ -311,17 +311,12 @@ main{
   justify-content: flex-start;
 }
 
-/* =========================
-   RESPONSIVE CONTACTO
-   ========================= */
-
 @media (max-width: 768px){
 
   main{
     padding-bottom: 10vh;
   }
 
-  /* HERO */
   .contacto-hero{
     width: 84%;
     padding: 4vh 6%;
@@ -336,14 +331,12 @@ main{
     font-size: 2vh;
   }
 
-  /* GRID → COLUMNA */
   .contacto-grid{
     width: 92%;
     grid-template-columns: 1fr;
     gap: 4vh;
   }
 
-  /* INFO */
   .contacto-info{
     padding: 4vh 8%;
     gap: 3vh;
@@ -378,7 +371,6 @@ main{
     font-size: 2.7vh;
   }
 
-  /* Filas dobles → columna */
   .fila{
     grid-template-columns: 1fr;
     gap: 2.5vh;
@@ -433,7 +425,6 @@ main{
   }
 }
 
-/* EXTRA: celulares chicos */
 @media (max-width: 420px){
 
   .contacto-hero h1{
@@ -448,3 +439,4 @@ main{
     height: 34vh;
   }
 }
+
