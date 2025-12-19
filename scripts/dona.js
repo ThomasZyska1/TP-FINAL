@@ -1,6 +1,3 @@
-/* =========================
-   i18n DONA (strings dinámicos)
-========================= */
 const DONA_I18N = {
   es: {
     acumulado: "Acumulado",
@@ -11,15 +8,12 @@ const DONA_I18N = {
     proyectoPlaceholder: "Elegí un proyecto…",
     wizardBase: "Donación (3 pasos)",
 
-    // Errores paso 1
     errProyecto: "Elegí un proyecto para continuar.",
     errMonto: "Elegí un monto (o ingresá otro).",
     errNombre: "Completá tu nombre completo.",
     errFecha: "Completá tu fecha de nacimiento.",
     errResidencia: "Completá tu lugar de residencia.",
     errEmail: "Completá un email válido.",
-
-    // Errores paso 2
     errMetodo: "Seleccioná un método de pago.",
     errTarjeta16: "El número de tarjeta debe tener 16 dígitos.",
     errTarjetaLuhn: "El número de tarjeta no parece válido (control de dígito).",
@@ -28,7 +22,7 @@ const DONA_I18N = {
     errCvv3: "El código de seguridad debe tener 3 dígitos.",
     errTransfer: "Para la demo, marcá “Ya realicé la transferencia”.",
 
-    // Resumen
+
     metodoTC: "Tarjeta",
     metodoTransf: "Transferencia",
     resumenProyecto: "Proyecto",
@@ -51,9 +45,7 @@ const DONA_I18N = {
     donarProyecto: "Donate to this project",
     barraLabel: "Project progress",
     proyectoPlaceholder: "Choose a project…",
-    wizardBase: "Donation (3 steps)",
-
-    // Step 1 errors
+    wizardBase: "Donation (3 step)
     errProyecto: "Choose a project to continue.",
     errMonto: "Choose an amount (or type another one).",
     errNombre: "Enter your full name.",
@@ -61,7 +53,6 @@ const DONA_I18N = {
     errResidencia: "Enter your place of residence.",
     errEmail: "Enter a valid email.",
 
-    // Step 2 errors
     errMetodo: "Choose a payment method.",
     errTarjeta16: "Card number must be 16 digits.",
     errTarjetaLuhn: "Card number doesn't look valid (check digit).",
@@ -70,7 +61,6 @@ const DONA_I18N = {
     errCvv3: "Security code must be 3 digits.",
     errTransfer: "For the demo, tick “I already made the transfer”.",
 
-    // Summary
     metodoTC: "Card",
     metodoTransf: "Bank transfer",
     resumenProyecto: "Project",
@@ -91,9 +81,6 @@ const DONA_I18N = {
 const getLang = () => localStorage.getItem("idioma") || "es";
 const tDona = (key) => DONA_I18N[getLang()]?.[key] || DONA_I18N.es[key] || "";
 
-/* =========================
-   DONA (logic)
-========================= */
 (() => {
   const moneda = new Intl.NumberFormat("es-AR", {
     style: "currency",
@@ -156,7 +143,6 @@ const tDona = (key) => DONA_I18N[getLang()]?.[key] || DONA_I18N.es[key] || "";
   let proyectos = [];
   let cbuActual = "";
 
-  // flags para validación en tiempo real (no spamear errores desde el inicio)
   let paso1Intentado = false;
   let paso2Intentado = false;
 
@@ -225,7 +211,6 @@ const tDona = (key) => DONA_I18N[getLang()]?.[key] || DONA_I18N.es[key] || "";
   function renderProyectos() {
     if (!grid || !selectProyecto) return;
 
-    // Select
     selectProyecto.innerHTML = "";
     const opt0 = document.createElement("option");
     opt0.value = "";
@@ -241,7 +226,6 @@ const tDona = (key) => DONA_I18N[getLang()]?.[key] || DONA_I18N.es[key] || "";
       selectProyecto.appendChild(opt);
     }
 
-    // Grid
     grid.innerHTML = "";
     const lang = getLang();
 
@@ -284,7 +268,6 @@ const tDona = (key) => DONA_I18N[getLang()]?.[key] || DONA_I18N.es[key] || "";
       grid.appendChild(card);
     }
 
-    // mantener selección actual si existe
     if (selectProyecto.value) {
       seleccionarProyecto(selectProyecto.value, false);
     } else {
@@ -312,7 +295,6 @@ const tDona = (key) => DONA_I18N[getLang()]?.[key] || DONA_I18N.es[key] || "";
       document.querySelector(".wizard-wrap")?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
-    // realtime
     validarPaso1({ silent: !paso1Intentado });
     actualizarEstadoBotones();
   }
@@ -581,10 +563,6 @@ const tDona = (key) => DONA_I18N[getLang()]?.[key] || DONA_I18N.es[key] || "";
     }
   }
 
-  /* ==========
-     Eventos
-  ========== */
-
   montoBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       montoBtns.forEach((b) => b.classList.remove("activo"));
@@ -638,7 +616,6 @@ const tDona = (key) => DONA_I18N[getLang()]?.[key] || DONA_I18N.es[key] || "";
     actualizarEstadoBotones();
   });
 
-  // Paso 2 realtime
   [numeroTarjeta, nombreTarjeta, vencimiento, cvv].forEach((el) => {
     el?.addEventListener("input", () => {
       if (paso2Intentado) validarPaso2({ silent: false });
@@ -699,9 +676,6 @@ const tDona = (key) => DONA_I18N[getLang()]?.[key] || DONA_I18N.es[key] || "";
     resetWizard();
   });
 
-  /* ==========
-     Init
-  ========== */
   initProyectos();
   renderProyectos();
   irA(1);
@@ -711,11 +685,9 @@ const tDona = (key) => DONA_I18N[getLang()]?.[key] || DONA_I18N.es[key] || "";
   window.__renderProyectosDona = renderProyectos;
 })();
 
-/* =========================
-   Re-render al cambiar idioma
-========================= */
 window.addEventListener("idioma:cambio", () => {
   if (typeof window.__renderProyectosDona === "function") {
     window.__renderProyectosDona();
   }
 });
+
