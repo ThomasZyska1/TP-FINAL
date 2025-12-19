@@ -2,10 +2,7 @@
   "use strict";
 
   const getLang = () => (localStorage.getItem("idioma") || "es").toLowerCase();
-
-  // Traducciones por página de proyecto.
-  // Se aplican SOLO sobre el contenido dentro de <main> (no toca nav/footer).
-  // body debe tener: data-proyecto="delta" | "cordoba" | "patagonia" | "corrientes" | "lapampa"
+  
   const TEXTOS = {
     delta: {
       es: {
@@ -194,7 +191,6 @@
     const h1s = scope.querySelectorAll("h1");
     const ps  = scope.querySelectorAll("p");
 
-    // Reemplaza en orden, sin romper si hay más/menos elementos
     if (t.h1 && t.h1.length) {
       t.h1.forEach((txt, i) => { if (h1s[i] && txt) h1s[i].textContent = txt; });
     }
@@ -205,8 +201,6 @@
     document.documentElement.setAttribute("lang", lang);
   }
 
-  // Fallback: si en estas páginas no corrés tu script global de idiomas,
-  // esto hace que los botones [data-lang] cambien idioma y disparen el evento.
   function wireBotonesIdioma() {
     const botones = document.querySelectorAll("[data-lang]");
     if (!botones.length) return;
